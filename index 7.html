@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inside the Sneakers</title>
+  <meta name="description" content="Inside the Sneakers by Ronn Popagorgio" />
+  <style>
+    :root {
+      --bg: #090909;
+      --panel: rgba(255,255,255,0.05);
+      --line: rgba(255,255,255,0.10);
+      --text: #f5f5f5;
+      --muted: #c4c4c4;
+      --shadow: 0 20px 60px rgba(0,0,0,0.45);
+      --radius: 24px;
+      --max: 1180px;
+      --hotpink: #f008bb;
+      --cyan: #0fe9ef;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.76)),
+        url("Inthesneakers-1.jpeg") center/cover no-repeat fixed;
+      min-height: 100vh;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+    }
+    .site-header {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(0,0,0,0.28);
+      backdrop-filter: blur(8px);
+    }
+    .brand {
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .brand small {
+      display: block;
+      font-size: 0.74rem;
+      color: var(--muted);
+    }
+    .hero {
+      min-height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+      padding: 4rem 0;
+    }
+    .hero-panel {
+      max-width: 760px;
+      background: rgba(0,0,0,0.45);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .eyebrow {
+      margin-bottom: 1rem;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.2rem, 6vw, 4.9rem);
+      line-height: 0.96;
+      /* Add a hot pink stroke and glow to the heading for a bold look */
+      color: var(--text);
+      -webkit-text-stroke: 1px var(--hotpink);
+      text-shadow: 0 0 8px var(--hotpink);
+    }
+    .subtag {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .pitch {
+      margin-bottom: 1.5rem;
+    }
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 1rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-weight: bold;
+      transition: 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--hotpink);
+      color: #fff;
+      border-color: var(--hotpink);
+    }
+    .btn-secondary {
+      background: var(--cyan);
+      color: #000;
+      border-color: var(--cyan);
+    }
+    /* Make the ghost button pop with our accent color */
+    .btn-ghost {
+      background: transparent;
+      color: var(--hotpink);
+      border-color: var(--hotpink);
+    }
+    .btn-ghost:hover {
+      background: var(--hotpink);
+      color: #fff;
+    }
+    /* QR section */
+    .qr-codes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .qr-codes figure {
+      margin: 0;
+      text-align: center;
+    }
+    .qr-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .qr-codes figcaption {
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      Inside the Sneakers
+      <small>by Ronn Popagorgio</small>
+    </div>
+  </div>
+</header>
+<main class="hero">
+  <div class="container">
+    <section class="hero-panel">
+      <div class="eyebrow">The life behind the sign</div>
+      <h1>
+        People hate two things:<br>
+        what they fear<br>
+        and what they envy.
+      </h1>
+      <p class="subtag">And nobody’s envious of the guy holding the sign.</p>
+      <p class="pitch">
+        Inside the Sneakers is a personal project about the truth behind public struggle,
+        the story behind the assumptions, and the real life people usually do not stop
+        long enough to ask about.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://venmo.com/nthesneakers" target="_blank">
+          Support on Venmo
+        </a>
+        <a class="btn btn-secondary" href="https://cash.app/$inthesneakers" target="_blank">
+          Support on Cash App
+        </a>
+        <a class="btn btn-ghost" href="about.html">
+          Read the Story
+        </a>
+      </div>
+      <!-- QR codes section -->
+      <div class="qr-codes">
+        <figure>
+          <img src="venmo_qr.png" alt="Venmo QR code" class="qr-img">
+          <figcaption>Scan to support on Venmo</figcaption>
+        </figure>
+        <figure>
+          <img src="cash_qr.png" alt="Cash App QR code" class="qr-img">
+          <figcaption>Scan to support on Cash App</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>
