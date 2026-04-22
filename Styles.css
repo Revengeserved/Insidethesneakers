@@ -7,6 +7,7 @@
   --pink: #ff2fb3;
   --pink-strong: #ff00a8;
   --pink-soft: rgba(255, 47, 179, 0.18);
+  --blue-electric: #0fe9ef;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   --radius: 24px;
   --max: 1100px;
@@ -98,10 +99,10 @@ h1 {
   font-size: clamp(2.4rem, 8vw, 4.8rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
-  color: #ffffff;
+  color: var(--blue-electric);
   text-shadow:
-    0 0 10px rgba(255, 47, 179, 0.40),
-    0 0 26px rgba(255, 47, 179, 0.20);
+    0 0 10px rgba(15, 233, 239, 0.50),
+    0 0 26px rgba(15, 233, 239, 0.28);
 }
 
 .subtag,
