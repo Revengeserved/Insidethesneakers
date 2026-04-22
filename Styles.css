@@ -1,40 +1,199 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inside the Sneakers | Ronn Popagorgio</title>
-  <meta name="description" content="Inside the Sneakers is a raw personal storytelling project by Ronn Popagorgio, with ways to support directly." />
-  <meta name="theme-color" content="#090909" />
-  <link rel="canonical" href="https://inthesneakers.life/" />
-  <meta property="og:title" content="Inside the Sneakers" />
-  <meta property="og:description" content="The life behind the sign. A personal story by Ronn Popagorgio." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://inthesneakers.life/" />
-  <meta property="og:image" content="https://inthesneakers.life/Inthesneakers-1.jpeg" />
-  <link rel="stylesheet" href="Styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <p class="brand">Inside the Sneakers <small>by Ronn Popagorgio</small></p>
-    </div>
-  </header>
+:root {
+  --bg: #090909;
+  --panel: rgba(255, 255, 255, 0.05);
+  --line: rgba(255, 255, 255, 0.10);
+  --text: #f5f5f5;
+  --muted: #cfcfcf;
+  --pink: #ff2fb3;
+  --pink-strong: #ff00a8;
+  --pink-soft: rgba(255, 47, 179, 0.18);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  --radius: 24px;
+  --max: 1100px;
+}
 
-  <main class="hero">
-    <div class="container">
-      <section class="hero-panel" aria-labelledby="home-title">
-        <p class="eyebrow">Inside the Sneakers</p>
-        <h1 id="home-title">Turns Out Rock Bottom Has a Basement</h1>
-        <p class="pitch">I’m a disabled veteran, and for six years, I’ve been fighting to get SSDI. Right now, we have no food stamps, no EBT, and every door feels closed. But this isn’t where my story ends. I want this blog to be a place of positivity—a space where I share how I stay motivated, how I support my kids, and how I find little ways to keep giving back. My hope is that, even from this rock bottom, I can offer strength, courage, and a reminder that we don’t have to give up.</p>
+* {
+  box-sizing: border-box;
+}
 
-        <nav class="cta-row" aria-label="Support and story links">
-          <a class="btn btn-primary" href="https://www.venmo.com/u/inthesneakers" target="_blank" rel="noopener noreferrer">Support on Venmo</a>
-          <a class="btn btn-secondary" href="https://cash.app/$inthesneakers" target="_blank" rel="noopener noreferrer">Support on Cash App</a>
-          <a class="btn btn-secondary" href="about.html">Read the Story</a>
-        </nav>
-      </section>
-    </div>
-  </main>
-</body>
-</html>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255, 0, 168, 0.16), transparent 30%),
+    linear-gradient(180deg, #050505 0%, #090909 45%, #111111 100%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(calc(100% - 32px), var(--max));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: relative;
+  z-index: 2;
+  padding: 20px 0 0;
+}
+
+.brand {
+  margin: 0;
+  font-size: 0.98rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.brand small {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 0.8em;
+  letter-spacing: 0.04em;
+}
+
+.hero {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  padding: 28px 0 48px;
+}
+
+.hero-panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 34px 28px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--pink);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 8vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(255, 47, 179, 0.40),
+    0 0 26px rgba(255, 47, 179, 0.20);
+}
+
+.subtag,
+.pitch {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.subtag {
+  margin: 18px 0 10px;
+}
+
+.pitch {
+  margin: 0;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-strong) 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04), 0 10px 26px rgba(255, 0, 168, 0.28);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 14px 34px rgba(255, 0, 168, 0.34);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.04);
+  color: #ffffff;
+  border-color: rgba(255, 47, 179, 0.26);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+.btn-secondary:hover {
+  background: var(--pink-soft);
+  border-color: rgba(255, 47, 179, 0.42);
+}
+
+@media (max-width: 700px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .hero-panel {
+    padding: 26px 20px;
+    border-radius: 20px;
+  }
+
+  .brand small {
+    display: block;
+    margin: 6px 0 0;
+  }
+
+  .subtag,
+  .pitch {
+    font-size: 0.98rem;
+  }
+
+  .cta-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
