@@ -1,209 +1,40 @@
-:root {
-  --bg: #090909;
-  --panel: rgba(0,0,0,0.45);
-  --line: rgba(255,255,255,0.12);
-  --text: #f5f5f5;
-  --muted: #c4c4c4;
-  --shadow: 0 20px 60px rgba(0,0,0,0.45);
-  --radius: 24px;
-  --max: 1180px;
-  --hotpink: #f008bb;
-  --cyan: #0fe9ef;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inside the Sneakers | Ronn Popagorgio</title>
+  <meta name="description" content="Inside the Sneakers is a raw personal storytelling project by Ronn Popagorgio, with ways to support directly." />
+  <meta name="theme-color" content="#090909" />
+  <link rel="canonical" href="https://inthesneakers.life/" />
+  <meta property="og:title" content="Inside the Sneakers" />
+  <meta property="og:description" content="The life behind the sign. A personal story by Ronn Popagorgio." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://inthesneakers.life/" />
+  <meta property="og:image" content="https://inthesneakers.life/Inthesneakers-1.jpeg" />
+  <link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="brand">Inside the Sneakers <small>by Ronn Popagorgio</small></p>
+    </div>
+  </header>
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <main class="hero">
+    <div class="container">
+      <section class="hero-panel" aria-labelledby="home-title">
+        <p class="eyebrow">Inside the Sneakers</p>
+        <h1 id="home-title">Turns Out Rock Bottom Has a Basement</h1>
+        <p class="pitch">I’m a disabled veteran, and for six years, I’ve been fighting to get SSDI. Right now, we have no food stamps, no EBT, and every door feels closed. But this isn’t where my story ends. I want this blog to be a place of positivity—a space where I share how I stay motivated, how I support my kids, and how I find little ways to keep giving back. My hope is that, even from this rock bottom, I can offer strength, courage, and a reminder that we don’t have to give up.</p>
 
-body {
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  background:
-    linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.76)),
-    url("Inthesneakers-1.jpeg") center/cover no-repeat fixed;
-  color: var(--text);
-  min-height: 100vh;
-  line-height: 1.6;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  width: min(100% - 2rem, var(--max));
-  margin: 0 auto;
-}
-
-/* HEADER */
-.site-header {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--line);
-  background: rgba(0,0,0,0.28);
-  backdrop-filter: blur(8px);
-}
-
-.brand {
-  font-size: 1rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.brand small {
-  display: block;
-  font-size: 0.74rem;
-  color: var(--muted);
-}
-
-/* HERO */
-.hero {
-  min-height: calc(100vh - 76px);
-  display: flex;
-  align-items: center;
-  padding: 2.5rem 0 3rem;
-}
-
-.hero-panel {
-  max-width: 720px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.8rem 2rem;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-}
-
-.eyebrow {
-  margin-bottom: 0.8rem;
-  padding: 0.35rem 0.75rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-/* MAIN HEADING */
-h1 {
-  margin: 0 0 0.8rem;
-  font-size: clamp(2.4rem, 6vw, 4.8rem);
-  line-height: 0.95;
-  color: var(--text);
-  -webkit-text-stroke: 1px var(--cyan);
-  text-shadow:
-    0 0 8px var(--cyan),
-    0 0 16px var(--cyan),
-    0 0 28px var(--cyan);
-  text-transform: uppercase;
-}
-
-/* SUPPORTING TEXT */
-.subtag {
-  color: var(--muted);
-  margin-bottom: 1.2rem;
-  font-size: 1.05rem;
-}
-
-.pitch {
-  margin-bottom: 1.4rem;
-  color: var(--muted);
-  max-width: 600px;
-}
-
-/* BUTTONS */
-.cta-row {
-  display: flex;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-.btn {
-  padding: 0.85rem 1.2rem;
-  border-radius: 999px;
-  border: 1px solid var(--hotpink);
-  font-weight: bold;
-  transition: 0.2s;
-  min-width: 180px;
-  text-align: center;
-  font-size: 0.95rem;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn-primary {
-  background: var(--hotpink);
-  color: #fff;
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--hotpink);
-}
-
-.btn-secondary:hover {
-  background: var(--hotpink);
-  color: #fff;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .hero {
-    padding: 2rem 0 2.5rem;
-  }
-
-  .hero-panel {
-    padding: 1.5rem 1.4rem;
-  }
-
-  h1 {
-    font-size: clamp(2.1rem, 10vw, 4rem);
-  }
-
-  .btn {
-    min-width: 100%;
-  }
-}
-.music-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: min(100%, 340px);
-  padding: 14px 22px;
-  border: 1px solid rgba(240, 8, 187, 0.65);
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(240, 8, 187, 0.22), rgba(240, 8, 187, 0.12));
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-align: center;
-  box-shadow:
-    0 0 10px rgba(240, 8, 187, 0.35),
-    0 0 22px rgba(240, 8, 187, 0.22),
-    inset 0 0 10px rgba(255, 255, 255, 0.04);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-}
-
-.music-button:hover {
-  transform: translateY(-2px);
-  border-color: rgba(240, 8, 187, 0.95);
-  box-shadow:
-    0 0 14px rgba(240, 8, 187, 0.55),
-    0 0 34px rgba(240, 8, 187, 0.36),
-    inset 0 0 12px rgba(255, 255, 255, 0.06);
-}
-
-.music-button:active {
-  transform: translateY(0);
-}
-
-.music-button:focus-visible {
-  outline: 2px solid #0fe9ef;
-  outline-offset: 4px;
-}
+        <nav class="cta-row" aria-label="Support and story links">
+          <a class="btn btn-primary" href="https://www.venmo.com/u/inthesneakers" target="_blank" rel="noopener noreferrer">Support on Venmo</a>
+          <a class="btn btn-secondary" href="https://cash.app/$inthesneakers" target="_blank" rel="noopener noreferrer">Support on Cash App</a>
+          <a class="btn btn-secondary" href="about.html">Read the Story</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
