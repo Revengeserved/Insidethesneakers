@@ -130,6 +130,8 @@ h1 {
 
 .btn {
   display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
   align-items: center;
   justify-content: center;
   min-width: 210px;
@@ -139,6 +141,14 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.02em;
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.btn small {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
 }
 
 .btn:hover {
