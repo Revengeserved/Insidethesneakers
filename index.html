@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Syne+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=12" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNFNVGXCFL"></script>
   <script>
@@ -29,35 +29,126 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <p class="brand">Inside the Sneakers <small>by Ronn Popagorgio</small></p>
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Inside the Sneakers home">Inside the Sneakers <small>by Ronn Popagorgio</small></a>
+      <nav class="top-links" aria-label="Page links">
+        <a href="#story">Story</a>
+        <a href="#support">Support</a>
+        <a href="#read">Read</a>
+      </nav>
     </div>
   </header>
 
-  <main class="hero">
-    <div class="container hero-grid">
-      <section class="hero-panel" aria-labelledby="home-title">
-        <p class="eyebrow">Personal storytelling project</p>
-        <h1 id="home-title">The Life Behind the Sign</h1>
-        <p class="callout">Who would have known that rock bottom had a basement?</p>
-        <p class="pitch">Inside the Sneakers is where I’m telling the story from the ground up — the eviction pressure, the waiting, the broken systems, and the climb back from a place most people only see for a second at a stoplight.</p>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <article class="hero-panel" aria-labelledby="home-title">
+          <p class="eyebrow">Personal storytelling project</p>
+          <h1 id="home-title">The Life Behind the Sign</h1>
+          <p class="callout">Who would have known that rock bottom had a basement?</p>
+          <p class="pitch">Inside the Sneakers is where I’m telling the story from the ground up — the eviction pressure, the waiting, the broken systems, and the climb back from a place most people only see for a second at a stoplight.</p>
 
-        <nav class="cta-row" aria-label="Support and story links">
+          <nav class="cta-row" aria-label="Support and story links">
+            <a class="btn btn-primary" href="https://venmo.com/u/insidethesneakers" target="_blank" rel="noopener noreferrer">
+              <span>Support on Venmo</span>
+              <small>@InsideTheSneakers</small>
+            </a>
+            <a class="btn btn-primary" href="https://cash.app/$inthesneakers" target="_blank" rel="noopener noreferrer">
+              <span>Support on Cash App</span>
+              <small>$inthesneakers</small>
+            </a>
+            <a class="btn btn-secondary" href="https://inthesneakers.medium.com/full-introduction-b793f1e91fb6" target="_blank" rel="noopener noreferrer">
+              <span>Read the Full Story</span>
+              <small>Medium introduction</small>
+            </a>
+          </nav>
+        </article>
+
+        <aside class="sneaker-card" aria-label="Inside the Sneakers visual card">
+          <div class="shoe-mark" aria-hidden="true">ITS</div>
+          <p class="tagline">Torn laces. Dirty soles. Still walking.</p>
+          <div class="mini-stats">
+            <span>Veteran</span>
+            <span>Family</span>
+            <span>Survival</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="story" class="section">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">What this is</p>
+          <h2>Not a pity page. A record.</h2>
+        </div>
+        <div class="copy-stack">
+          <p>This is the public notebook for what happened, what it cost, and what it takes to keep moving when every system tells you to wait.</p>
+          <p>Some people see the sign. This project is about the person inside the sneakers holding it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container cards">
+        <article class="info-card">
+          <span class="card-number">01</span>
+          <h3>The collapse</h3>
+          <p>The moment things started falling apart — housing pressure, money delays, and the slow grind of being ignored.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-number">02</span>
+          <h3>The receipts</h3>
+          <p>Posts, updates, and proof of what happened, written in plain language without polishing the pain out of it.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-number">03</span>
+          <h3>The comeback</h3>
+          <p>A living story about making it through the basement of rock bottom and finding the stairs back up.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="support" class="section support-section">
+      <div class="container support-panel">
+        <div>
+          <p class="eyebrow">Direct support</p>
+          <h2>Help keep the story moving.</h2>
+          <p>Support goes toward immediate needs while this project documents the bigger picture: food, shelter, stability, and the fight to get back above water.</p>
+        </div>
+        <div class="support-actions">
           <a class="btn btn-primary" href="https://venmo.com/u/insidethesneakers" target="_blank" rel="noopener noreferrer">
-            <span>Support on Venmo</span>
+            <span>Venmo</span>
             <small>@InsideTheSneakers</small>
           </a>
           <a class="btn btn-primary" href="https://cash.app/$inthesneakers" target="_blank" rel="noopener noreferrer">
-            <span>Support on Cash App</span>
+            <span>Cash App</span>
             <small>$inthesneakers</small>
           </a>
-          <a class="btn btn-secondary" href="https://inthesneakers.medium.com/full-introduction-b793f1e91fb6" target="_blank" rel="noopener noreferrer">
-            <span>Read the Full Story</span>
-            <small>Medium introduction</small>
-          </a>
-        </nav>
-      </section>
-    </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="read" class="section read-section">
+      <div class="container read-card">
+        <div>
+          <p class="eyebrow">Start here</p>
+          <h2>Read the introduction on Medium.</h2>
+          <p>The first full post opens the door: the day I thought my world had crumbled — before I knew it had a whole lot more crumbling to do.</p>
+        </div>
+        <a class="btn btn-secondary" href="https://inthesneakers.medium.com/full-introduction-b793f1e91fb6" target="_blank" rel="noopener noreferrer">
+          <span>Open Medium</span>
+          <small>Full introduction</small>
+        </a>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© Inside the Sneakers</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
 </body>
 </html>
