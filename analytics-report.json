@@ -2,7 +2,7 @@
   "site": "https://inthesneakers.life/",
   "platform": "Google Analytics 4",
   "measurement_id": "G-XNFNVGXCFL",
-  "ga4_property_id": "TODO_ADD_GA4_PROPERTY_ID",
+  "ga4_property_id": "392399720",
   "date_range": {
     "start_date": "TODO",
     "end_date": "TODO"
@@ -20,8 +20,8 @@
   "locations": [],
   "devices": [],
   "notes": [
-    "Placeholder file for future real Google Analytics data.",
-    "Real data requires Google Analytics Data API access and credentials stored safely in GitHub Secrets.",
+    "GA4 Property ID has been added.",
+    "Real data still requires Google Analytics Data API access and credentials stored safely in GitHub Secrets.",
     "Do not paste Google private keys or service account credentials directly into public files."
   ],
   "last_updated": null
