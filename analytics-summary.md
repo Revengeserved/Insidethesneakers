@@ -3,7 +3,8 @@
 **Site:** https://inthesneakers.life/  
 **Platform:** Google Analytics 4  
 **Measurement ID:** `G-XNFNVGXCFL`  
-**Status:** Placeholder until real GA4 API data is connected.
+**GA4 Property ID:** `392399720`  
+**Status:** Property ID added. Real GA4 API data still needs credentials connected through GitHub Secrets.
 
 ## Date range
 
@@ -38,17 +39,16 @@ No data pulled yet.
 
 ## What this means
 
-This file is ready to become the human-readable analytics report for ChatGPT. Once the Google Analytics Data API is connected through GitHub Secrets, this file can be updated with real numbers.
+This file is ready to become the human-readable analytics report for ChatGPT. The GA4 Property ID is now saved, but the repository still needs secure Google Analytics Data API credentials before real numbers can be pulled automatically.
 
 ## Next setup needed
 
-1. Find the GA4 Property ID in Google Analytics.
-2. Create or use a Google Cloud project.
-3. Enable the Google Analytics Data API.
-4. Create a service account.
-5. Add the service account email as a Viewer in the GA4 property.
-6. Store credentials as GitHub Secrets.
-7. Add a GitHub Action that updates `analytics-report.json` and this summary file.
+1. Create or use a Google Cloud project.
+2. Enable the Google Analytics Data API.
+3. Create a service account.
+4. Add the service account email as a Viewer in the GA4 property.
+5. Store the service account JSON safely as a GitHub Secret.
+6. Add a GitHub Action that updates `analytics-report.json` and this summary file.
 
 ## Safety note
 
