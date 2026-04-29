@@ -15,6 +15,14 @@ try {
   throw new Error('GA_SERVICE_ACCOUNT_JSON is not valid JSON. Paste the full service account JSON into the GitHub secret.');
 }
 
+if (!credentials.client_email || !credentials.private_key) {
+  throw new Error('GA_SERVICE_ACCOUNT_JSON is missing client_email or private_key. Paste the full service account JSON file.');
+}
+
+// GitHub Secrets sometimes preserve the private key newlines as literal "\\n" text.
+// Google Auth needs real newline characters inside the PEM private key.
+credentials.private_key = credentials.private_key.replace(/\\n/g, '\n').trim();
+
 const analyticsDataClient = new BetaAnalyticsDataClient({ credentials });
 
 const today = new Date();
